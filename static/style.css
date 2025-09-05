@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
+
+.user-msg, .bot-msg {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.2s;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background: #1f7a1f;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-msg {
+    align-self: flex-start;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    border-bottom-left-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background: #1e1e1e;
+    border-top: 1px solid #333;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    background: #2c2c2c;
+    color: #fff;
+}
+
+#user-input::placeholder {
+    color: #888;
+}
+
+#user-input:focus {
+    outline: none;
+}
+
+#send-btn {
+    border: none;
+    background: #0d6efd;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-btn:hover {
+    background: #0b5ed7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
