@@ -1,0 +1,1 @@
+This isn't a generative AI model or anything that is completly autonomous. It uses some parameters and data from a CSV file to respond to the user. It will be a new model, but right now it's just an attemp.
